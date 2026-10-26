@@ -1,0 +1,5 @@
+*.json
+!environment.example.json
+*.bak
+*.lock
+*.tmp

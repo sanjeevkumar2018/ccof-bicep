@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "environment": {
+    "tenantId": "REPLACE-TENANT-GUID",
+    "subscriptionId": "REPLACE-SUBSCRIPTION-GUID",
+    "location": "REPLACE-APPROVED-REGION"
+  },
+  "network": {
+    "inputs": {
+      "mode": "existing",
+      "resourceGroup": "REPLACE-EXISTING-NETWORK-RG",
+      "vnetName": "REPLACE-VNET-NAME",
+      "addressPrefixes": ["REPLACE-APPROVED-VNET-CIDR"],
+      "dnsServers": [],
+      "subnets": {
+        "apim": {
+          "name": "snet-apim",
+          "addressPrefix": "REPLACE-APIM-SUBNET-CIDR",
+          "networkSecurityGroupId": "REPLACE-APPROVED-NSG-RESOURCE-ID",
+          "routeTableId": null,
+          "natGatewayId": null
+        },
+        "functions": {
+          "name": "snet-functions",
+          "addressPrefix": "REPLACE-FUNCTIONS-SUBNET-CIDR",
+          "networkSecurityGroupId": null,
+          "routeTableId": null,
+          "natGatewayId": null
+        },
+        "privateEndpoints": {
+          "name": "snet-private-endpoints",
+          "addressPrefix": "REPLACE-PRIVATE-ENDPOINT-SUBNET-CIDR",
+          "networkSecurityGroupId": null,
+          "routeTableId": null,
+          "natGatewayId": null
+        }
+      }
+    },
+    "outputs": {}
+  },
+  "modules": {}
+}
